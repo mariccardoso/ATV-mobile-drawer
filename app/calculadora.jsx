@@ -75,7 +75,7 @@ export default function Calculator() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#adf7bd',
+    backgroundColor: '#1e1e2f',
     justifyContent: 'space-between',
     padding: 20,
   },
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
     height: '80%',
     width: '100%',
     justifyContent: 'space-between',
-    backgroundColor: '#fff',
     borderRadius: 30,
     padding: 20,
     shadowColor: '#000',
@@ -98,7 +97,7 @@ const styles = StyleSheet.create({
   },
   display: {
     marginTop: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#2a2a3d',
     borderRadius: 50,
     padding: "30px",
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -129,7 +128,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   normalButton: {
-    backgroundColor: '#f4f4f4',
+    backgroundColor: '#2a2a3d',
     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
 
   },
@@ -138,7 +137,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   buttonText: {
-    color: "#368f49",
+    color: "#fff",
     fontSize: 28,
   },
 });

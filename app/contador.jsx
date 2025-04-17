@@ -58,7 +58,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1e1e2f',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     gap: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#1e1e2f',
     width: '100%',
     height: '100%',
   },
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Arial',
     marginBottom: 20,
-    color: '#368f49',
+    color: '#24e35a',
     textAlign: 'center',
   },
   counterText: {

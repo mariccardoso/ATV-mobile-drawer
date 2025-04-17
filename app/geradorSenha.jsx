@@ -24,7 +24,7 @@ export default function ProfileScreen() {
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
       >
-        <Ionicons name="lock-closed-outline" size={24} color="#24e35a" />
+        <Ionicons name="lock-closed-outline" size={54} color="#24e35a" />
       </TouchableOpacity>
 
       <View style={styles.passwordGenerator}>
@@ -41,34 +41,43 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#1e1e2f',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   menuButton: {
     padding: 20,
     alignSelf: 'flex-start',
+    bottom: 300
   },
   passwordGenerator: {
     marginTop: 20,
     alignItems: 'center',
+    gap: 10,
     
   },
   passwordLabel: {
-    fontSize: 16,
+    fontSize: 26,
     fontWeight: 'bold',
+    color: '#24e35a',
   },
   password: {
-    fontSize: 16,
-    color: '#333',
+    padding: 15,
+    backgroundColor: '#2a2a3d',
+    borderRadius: 25,
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)',
+    fontSize: 26,
+    color: '#24e35a',
     marginVertical: 10,
   },
   generateButton: {
     backgroundColor: '#24e35a',
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 35,
   },
   generateButtonText: {
-    color: '#fff',
-    fontSize: 16,
+    color: '#00',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });
