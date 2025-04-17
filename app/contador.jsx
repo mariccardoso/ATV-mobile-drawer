@@ -1,16 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Drawer } from 'expo-router/drawer';
 
-
-export default function HomeScreen() {
+export default function ProfileScreen() {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      
       <TouchableOpacity
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
@@ -18,9 +15,13 @@ export default function HomeScreen() {
         <Ionicons name="menu" size={24} color="#333" />
       </TouchableOpacity>
 
-      <View style={styles.content}>
-        <Text style={styles.title}>Bem-vindo à Home!</Text>
-        <Text style={styles.subtitle}>Aqui você encontra informações iniciais.</Text>
+      <View style={styles.profileHeader}>
+        <Image
+          source={{ uri: 'https://via.placeholder.com/100' }}
+          style={styles.avatar}
+        />
+        <Text style={styles.name}>Usuário Exemplo</Text>
+        <Text style={styles.email}>usuario@exemplo.com</Text>
       </View>
     </View>
   );
@@ -36,19 +37,25 @@ const styles = StyleSheet.create({
     padding: 20,
     alignSelf: 'flex-start',
   },
-  content: {
+  profileHeader: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    // padding: 20,
     backgroundColor: '#fff',
     width: '100%',
     height: 200,
   },
-  title: {
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+  },
+  name: {
     fontSize: 18,
     fontWeight: 'bold',
   },
-  subtitle: {
+  email: {
     fontSize: 14,
     color: '#666',
     marginTop: 5,

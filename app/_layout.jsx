@@ -1,38 +1,58 @@
-import { Drawer } from "expo-router/drawer";
-import { setStatusBarBackgroundColor } from "expo-status-bar";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { Drawer } from 'expo-router/drawer';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Layout() {
-    return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
-            <Drawer>
-                <Drawer.Screen
-                    name="index"
-                    options={{
-                        title: "Home",
-                        drawerLabel: "Home",
-                        headerShown: false,
-                        headerLeft: true,
-                        drawerIcon: ({ size, color }) => (
-                            <Ionicons name="heart-outline" size={size} color={color} />
-                        ),
+  return (
+    <Drawer>
+      <Drawer.Screen
+        name="index"
+        options={{
+          drawerLabel: 'Início',
+          title: 'Home',
+          headerShown: false,
+          headerLeft: true,
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="calculadora"
+        options={{
+          drawerLabel: 'Calculadora',
+          title: 'Calculadora',
+          headerShown: false,
+          headerLeft: true,
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
+            <Drawer.Screen
+        name="contador"
+        options={{
+          drawerLabel: 'Contador',
+          title: 'Contador',
+          headerShown: false,
+          headerLeft: true,
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
+            <Drawer.Screen
+        name="geradorSenha"
+        options={{
+          drawerLabel: 'Gerador de Senha',
+          title: 'Gerador de Senha',
+          headerShown: false,
+          headerLeft: true,
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
+    </Drawer>
 
-                    }}
-                />
-                <Drawer.Screen
-                    name="profile"
-                    options={{
-                        drawerLabel: "Perfil",
-                        title: "Perfil",
-                        headerShown: false,
-                        // headerLeft: true,
-                        drawerIcon: ({ size, color }) => (
-                            <Ionicons name="person" size={size} color={color} />
-                        ),
-                    }}
-                />
-            </Drawer>
-        </GestureHandlerRootView>
-    );
+  );
 }
