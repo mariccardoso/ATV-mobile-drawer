@@ -15,7 +15,7 @@ export default function HomeScreen() {
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
       >
-        <Ionicons name="menu" size={24} color="#333" />
+        <Ionicons name="menu" size={24} color="#24e35a" />
       </TouchableOpacity>
 
       <View style={styles.content}>
