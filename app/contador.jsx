@@ -14,7 +14,7 @@ export default function ProfileScreen() {
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
       >
-<Ionicons name="add-circle-outline" size={45} color="#24e35a" />
+<Ionicons name="add-circle-outline" size={60} color="#24e35a" />
 </TouchableOpacity>
 
       {/* <View style={styles.profileHeader}>
@@ -24,7 +24,9 @@ export default function ProfileScreen() {
         />
       </View> */}
       <View style={styles.counterContainer}>
-      <Text style={styles.counterText}>Contador: {count}</Text>
+      <Text style={styles.counter}>Contador</Text>
+      <Text style={styles.counterText}>{count}</Text>
+
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.counterButton}
@@ -75,9 +77,6 @@ const styles = StyleSheet.create({
     // width: '100%',
     // height: 200,
   },
- 
-
-
   counterContainer: {
     flex: 1,
     gap: 5,
@@ -87,33 +86,38 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  counterText: {
-    fontSize: 30,
+  counter: {
+    fontSize: 40,
+    fontWeight: 'bold',
     fontFamily: 'Arial',
-    marginBottom: 
-    50,
-    justifyContent: 'flex-start',
-    color: '#333',
+    marginBottom: 20,
+    color: '#368f49',
+    textAlign: 'center',
+  },
+  counterText: {
+    fontSize: 50,
+    fontFamily: 'Arial',
+    marginBottom: 50,
+    justifyContent: 'center',
+    color: '#368f49',
+    fontWeight: 'bold',
     backgroundColor: 'rgba(94, 255, 140, 0.2)',
-    borderColor: '#24e35a',
-    borderWidth: 2,
-
-    height: 70,
-    width: 200,
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)',
     textAlign: 'center',
     padding: 10,
-    borderRadius: 5,
+    width: 100,
+    borderRadius: 50,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '100%',
+    width: '70%',
   },
   counterButton: {
     backgroundColor: '#24e35a',
-    padding: 15,
-    borderRadius: 5,
-    marginHorizontal: 10,
+    padding: 25,
+    borderRadius: 50,
+    marginHorizontal: 5,
     
   },
   buttonText: {
