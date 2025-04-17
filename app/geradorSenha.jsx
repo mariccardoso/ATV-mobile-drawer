@@ -1,10 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
+  const [password, setPassword] = useState('');
+
+  const generatePassword = () => {
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+    let newPassword = '';
+    for (let i = 0; i < 12; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      newPassword += characters[randomIndex];
+    }
+    setPassword(newPassword);
+  };
 
   return (
     <View style={styles.container}>
@@ -12,16 +24,15 @@ export default function ProfileScreen() {
         style={styles.menuButton}
         onPress={() => navigation.openDrawer()}
       >
-        <Ionicons name="menu" size={24} color="#333" />
+        <Ionicons name="lock-closed-outline" size={24} color="#24e35a" />
       </TouchableOpacity>
 
-      <View style={styles.profileHeader}>
-        <Image
-          source={{ uri: 'https://via.placeholder.com/100' }}
-          style={styles.avatar}
-        />
-        <Text style={styles.name}>Usuário Exemplo</Text>
-        <Text style={styles.email}>usuario@exemplo.com</Text>
+      <View style={styles.passwordGenerator}>
+        <Text style={styles.passwordLabel}>Senha Gerada:</Text>
+        <Text style={styles.password}>{password || 'Clique para gerar'}</Text>
+        <TouchableOpacity style={styles.generateButton} onPress={generatePassword}>
+          <Text style={styles.generateButtonText}>Gerar Senha</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -37,27 +48,27 @@ const styles = StyleSheet.create({
     padding: 20,
     alignSelf: 'flex-start',
   },
-  profileHeader: {
+  passwordGenerator: {
+    marginTop: 20,
     alignItems: 'center',
-    justifyContent: 'center',
-    // padding: 20,
-    backgroundColor: '#fff',
-    width: '100%',
-    height: 200,
+    
   },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
-  },
-  name: {
-    fontSize: 18,
+  passwordLabel: {
+    fontSize: 16,
     fontWeight: 'bold',
   },
-  email: {
-    fontSize: 14,
-    color: '#666',
-    marginTop: 5,
+  password: {
+    fontSize: 16,
+    color: '#333',
+    marginVertical: 10,
+  },
+  generateButton: {
+    backgroundColor: '#24e35a',
+    padding: 10,
+    borderRadius: 5,
+  },
+  generateButtonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });
