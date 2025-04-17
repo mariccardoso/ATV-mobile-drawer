@@ -73,8 +73,8 @@ export default function Layout() {
           title: 'Contador',
           headerShown: false,
           headerLeft: true,
-          drawerIcon: ({ size }) => (
-            <Ionicons name="person" size={size} color="#24e35a" />
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="add-circle-outline" size={size} color=#24e35a />
           ),
         }}
       />
