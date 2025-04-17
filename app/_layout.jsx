@@ -12,7 +12,7 @@ export default function Layout() {
           headerShown: false,
           headerLeft: true,
           drawerIcon: ({ size, color }) => (
-            <Ionicons name="home" size={size} color={color} />
+            <Ionicons name="home" size={size} color="#24e35a" />
           ),
         }}
       />
@@ -24,7 +24,7 @@ export default function Layout() {
           headerShown: false,
           headerLeft: true,
           drawerIcon: ({ size, color }) => (
-            <Ionicons name="calculator" size={size} color={color} />
+            <Ionicons name="calculator" size={size} color="#24e35a" />
           ),
         }}
       />
@@ -36,7 +36,7 @@ export default function Layout() {
           headerShown: false,
           headerLeft: true,
           drawerIcon: ({ size, color }) => (
-            <Ionicons name="person" size={size} color={color} />
+            <Ionicons name="person" size={size} color="#24e35a" />
           ),
         }}
       />
