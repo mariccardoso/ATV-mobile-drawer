@@ -47,8 +47,9 @@ export default function Layout() {
           title: 'Gerador de Senha',
           headerShown: false,
           headerLeft: true,
-          drawerIcon: ({ size, color }) => (
-            <Ionicons name="person" size={size} color={color} />
+          
+          drawerIcon: ({size}) => (
+            <Ionicons name="lock-closed-outline" size={size} color="#24e35a" />
           ),
         }}
       />
