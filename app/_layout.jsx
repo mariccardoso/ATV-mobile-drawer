@@ -24,7 +24,7 @@ export default function Layout() {
           headerShown: false,
           headerLeft: true,
           drawerIcon: ({ size, color }) => (
-            <Ionicons name="person" size={size} color={color} />
+            <Ionicons name="calculator" size={size} color={color} />
           ),
         }}
       />
